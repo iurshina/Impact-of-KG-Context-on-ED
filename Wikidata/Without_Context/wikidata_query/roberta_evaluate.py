@@ -21,7 +21,7 @@ from pytorch_transformers import (WEIGHTS_NAME, RobertaConfig, RobertaForSequenc
 
 
 _path = os.path.dirname(__file__)
-_saving_dir = os.path.join(_path, '../data/')
+_saving_dir = os.path.join(_path, 'data/')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 _bucket_size = 10
@@ -30,12 +30,12 @@ _minimum_trace = 10
 #model = TransformerModel('roberta', 'roberta-base')
 
 args = {
-    'data_dir': '../data/',
+    'data_dir': 'data/',
     'model_type':  'roberta',
     'model_name': 'roberta-base',
     'task_name': 'binary',
-    'output_dir': '../outputs/',
-    'cache_dir': '../cache/',
+    'output_dir': 'outputs/',
+    'cache_dir': 'cache/',
     'do_train': True,
     'do_eval': True,
     'fp16': False,

@@ -17,7 +17,7 @@ from pytorch_transformers import (WEIGHTS_NAME, RobertaConfig, RobertaForSequenc
 
 
 _path = os.path.dirname(__file__)
-_saving_dir = os.path.join(_path, '../data/')
+_saving_dir = os.path.join(_path, 'data/')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 _bucket_size = 10

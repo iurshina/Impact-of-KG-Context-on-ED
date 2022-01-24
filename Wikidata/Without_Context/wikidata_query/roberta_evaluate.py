@@ -30,12 +30,12 @@ _minimum_trace = 10
 #model = TransformerModel('roberta', 'roberta-base')
 
 args = {
-    'data_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_without_context_entity/wikidata_query/data/',
+    'data_dir': '../data/',
     'model_type':  'roberta',
     'model_name': 'roberta-base',
     'task_name': 'binary',
-    'output_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_without_context_entity/wikidata_query/outputs/',
-    'cache_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_without_context_entity/wikidata_query/cache/',
+    'output_dir': '../outputs/',
+    'cache_dir': '../cache/',
     'do_train': True,
     'do_eval': True,
     'fp16': False,

@@ -19,7 +19,7 @@ from tensorboardX import SummaryWriter
 
 from pytorch_transformers import AdamW, WarmupLinearSchedule
 
-from wikidata_query.utils_transformer import (convert_examples_to_features,
+from utils_transformer import (convert_examples_to_features,
                         output_modes, processors)
 
 logging.basicConfig(level=logging.INFO)

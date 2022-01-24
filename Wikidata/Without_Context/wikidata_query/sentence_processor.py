@@ -1,6 +1,6 @@
 import numpy as np
 
-from wikidata_query.utils import infer_vector_from_doc
+from utils import infer_vector_from_doc
 
 _is_relevant = [.0, 1.]
 _is_not_relevant = [1., 0.]

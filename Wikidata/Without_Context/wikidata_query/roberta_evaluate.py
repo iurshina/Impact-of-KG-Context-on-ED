@@ -14,7 +14,7 @@ import pandas as pd
 
 from pytorch_transformers import AdamW, WarmupLinearSchedule
 
-from wikidata_query.utils_transformer import (convert_examples_to_features,
+from utils_transformer import (convert_examples_to_features,
                         output_modes, processors)
 
 from pytorch_transformers import (WEIGHTS_NAME, RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer)

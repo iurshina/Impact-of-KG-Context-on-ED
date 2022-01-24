@@ -6,13 +6,13 @@ import math
 from ipywidgets import IntProgress
 
 #from wikidata_query.gcn_qa_model import GCN_QA
-from wikidata_query.read_data import get_json_data
-from wikidata_query.utils import bin_data_into_buckets, get_words, infer_vector_from_word
+from read_data import get_json_data
+from utils import bin_data_into_buckets, get_words, infer_vector_from_word
 from simpletransformers.model import TransformerModel
 import pandas as pd
 import torch
 import logging
-from wikidata_query.roberta_classification import load_and_cache_examples,train
+from roberta_classification import load_and_cache_examples,train
 from pytorch_transformers import (WEIGHTS_NAME, RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer)
 
 

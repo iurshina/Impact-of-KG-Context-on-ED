@@ -102,7 +102,6 @@ def get_triplets_for_word_2_hops(word):
                 pass
     return triplets
 
-
 def get_triplets_for_word_1_hop(word):
     url = 'https://query.wikidata.org/bigdata/namespace/wdq/sparql'
     triplets = []

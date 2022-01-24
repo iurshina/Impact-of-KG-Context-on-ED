@@ -1,6 +1,6 @@
 import requests
 
-from wikidata_query.wikidata_items import wikidata_items
+from wikidata_items import wikidata_items
 
 query_nn_back = '''
 PREFIX wikibase: <http://wikiba.se/ontology#>

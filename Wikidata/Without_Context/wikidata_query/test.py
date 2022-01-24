@@ -3,12 +3,12 @@ import json
 import numpy as np
 import glob
 import pandas as pd
-from wikidata_query.read_data import get_json_data
-from wikidata_query.utils import get_words, infer_vector_from_word
+from read_data import get_json_data
+from utils import get_words, infer_vector_from_word
 import torch
-from wikidata_query.roberta_evaluate import evaluate
+from roberta_evaluate import evaluate
 import logging
-from wikidata_query.roberta_classification import load_and_cache_examples
+from roberta_classification import load_and_cache_examples
 from pytorch_transformers import (WEIGHTS_NAME, RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer)
 
 

@@ -1,0 +1,8 @@
+simpletransformers
+tensorboardX
+pytorch_transformers
+pandas
+nltk
+matplotlib
+networkx
+ipywidgets

@@ -9,12 +9,12 @@ import logging
 
 from gensim.models import KeyedVectors
 
-from wikidata_query.utils import infer_vector_from_word, infer_vector_from_doc
-from wikidata_query.utils import get_words
-from wikidata_query.utils import _is_relevant
-from wikidata_query.utils import _is_not_relevant
-from wikidata_query.wikidata_items import wikidata_items
-from wikidata_query.sentence_processor import get_adjacency_matrices_and_vectors_given_triplets
+from utils import infer_vector_from_word, infer_vector_from_doc
+from utils import get_words
+from utils import _is_relevant
+from utils import _is_not_relevant
+from wikidata_items import wikidata_items
+from sentence_processor import get_adjacency_matrices_and_vectors_given_triplets
 
 _path = os.path.dirname(__file__)
 #_model = KeyedVectors.load_word2vec_format(os.path.join('/home/IAIS/cprabhu/Thesis/ned-graphs/', 'data/glove_2.2M.txt'))

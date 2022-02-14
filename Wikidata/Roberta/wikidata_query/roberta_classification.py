@@ -22,7 +22,7 @@ from pytorch_transformers import (WEIGHTS_NAME, RobertaConfig, RobertaForSequenc
 
 from pytorch_transformers import AdamW, WarmupLinearSchedule
 
-from wikidata_query.utils_transformer import (convert_examples_to_features,
+from utils_transformer import (convert_examples_to_features,
                         output_modes, processors)
 
 logging.basicConfig(level=logging.INFO)
@@ -35,12 +35,12 @@ MODEL_CLASSES = {
 }
 
 args = {
-    'data_dir': os.path.join(os.getcwd(), 'wikidata_query/data/'),
+    'data_dir': os.path.join(os.getcwd(), 'data/'),
     'model_type':  'roberta',
     'model_name': 'roberta-base',
     'task_name': 'binary',
-    'output_dir': os.path.join(os.getcwd(),'wikidata_query/outputs/'),
-    'cache_dir': os.path.join(os.getcwd(),'wikidata_query/cache/'),
+    'output_dir': os.path.join(os.getcwd(),'outputs/'),
+    'cache_dir': os.path.join(os.getcwd(),'cache/'),
     'do_train': True,
     'do_eval': True,
     'fp16': False,

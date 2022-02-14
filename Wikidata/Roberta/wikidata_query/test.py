@@ -3,12 +3,12 @@ import json
 import numpy as np
 import glob
 
-from wikidata_query.read_data import get_json_data
-from wikidata_query.utils import get_words, infer_vector_from_word
+from read_data import get_json_data
+from utils import get_words, infer_vector_from_word
 import torch
-from wikidata_query.roberta_evaluate import evaluate
+from roberta_evaluate import evaluate
 import logging
-from wikidata_query.roberta_classification import load_and_cache_examples
+from roberta_classification import load_and_cache_examples
 from pytorch_transformers import (WEIGHTS_NAME, 
                                   #BertConfig, BertForSequenceClassification, BertTokenizer,
                                   #XLMConfig, XLMForSequenceClassification, XLMTokenizer, 
@@ -17,7 +17,7 @@ from pytorch_transformers import (WEIGHTS_NAME,
 
 
 _path = os.path.dirname(__file__)
-_saving_dir = os.path.join(_path, '../data/')
+_saving_dir = os.path.join(_path, 'data/')
 _bucket_size = 10
 
 logging.basicConfig(level=logging.INFO)
@@ -30,12 +30,12 @@ MODEL_CLASSES = {
 }
 
 args = {
-    'data_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_roberta_epoch_1/wikidata_query/data/',
+    'data_dir': 'data/',
     'model_type':  'roberta',
     'model_name': 'roberta-base',
     'task_name': 'binary',
-    'output_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_roberta_epoch_1/wikidata_query/outputs/',
-    'cache_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_roberta_epoch_1/wikidata_query/cache/',
+    'output_dir': 'outputs/',
+    'cache_dir': 'cache/',
     'do_train': True,
     'do_eval': True,
     'fp16': False,

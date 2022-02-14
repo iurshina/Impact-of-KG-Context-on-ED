@@ -7,12 +7,12 @@ from ipywidgets import IntProgress
 
 #from wikidata_query.gcn_qa_model import GCN_QA
 #from wikidata_query.read_data import get_json_data
-from wikidata_query.utils import bin_data_into_buckets, get_words, infer_vector_from_word
+from utils import bin_data_into_buckets, get_words, infer_vector_from_word
 #from simpletransformers.model import TransformerModel
 import pandas as pd
 import torch
 import logging
-from wikidata_query.roberta_classification import load_and_cache_examples,train
+from roberta_classification import load_and_cache_examples,train
 from pytorch_transformers import (WEIGHTS_NAME, BertConfig, BertForSequenceClassification, BertTokenizer,
                                   XLMConfig, XLMForSequenceClassification, XLMTokenizer, 
                                   XLNetConfig, XLNetForSequenceClassification, XLNetTokenizer,
@@ -20,7 +20,7 @@ from pytorch_transformers import (WEIGHTS_NAME, BertConfig, BertForSequenceClass
 
 
 _path = os.path.dirname(__file__)
-_saving_dir = os.path.join(_path, '../data/')
+_saving_dir = os.path.join(_path, 'data/')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 _bucket_size = 10
@@ -30,12 +30,12 @@ _minimum_trace = 10
 
 args = {
     #'data_dir': '/home/IAIS/cprabhu/Thesis/ned-graphs/wikidata_entity_linking_with_attentive_rnn_triplets_transformer_roberta_epoch_1/wikidata_query/data/',
-    'data_dir': os.path.join(os.getcwd(),'wikidata_query/data/'),
+    'data_dir': os.path.join(os.getcwd(),'data/'),
     'model_type':  'roberta',
     'model_name': 'roberta-base',
     'task_name': 'binary',
-    'output_dir': os.path.join(os.getcwd(),'wikidata_query/outputs/'),
-    'cache_dir': os.path.join(os.getcwd(),'wikidata_query/cache/'),
+    'output_dir': os.path.join(os.getcwd(),'outputs/'),
+    'cache_dir': os.path.join(os.getcwd(),'cache/'),
     'do_train': True,
     'do_eval': True,
     'fp16': False,
